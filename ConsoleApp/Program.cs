@@ -1,4 +1,5 @@
 ﻿using System;
+using ClassLibrary;
 
 namespace ConsoleApp
 {
@@ -6,7 +7,9 @@ namespace ConsoleApp
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(ClassLibrary.UtilityHelloWorld.HelloWorld(args.Length > 0 ? args[0] : null));
+            var name = args.Length > 0 ? args[0] : null;
+            var helloStr = UtilityHelloWorld.HelloWorld(name);
+            Console.WriteLine(helloStr);
         }
     }
 }

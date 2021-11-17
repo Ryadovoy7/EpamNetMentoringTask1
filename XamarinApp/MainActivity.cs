@@ -3,6 +3,7 @@ using Android.OS;
 using Android.Runtime;
 using Android.Widget;
 using AndroidX.AppCompat.App;
+using ClassLibrary;
 
 namespace XamarinApp
 {
@@ -19,7 +20,7 @@ namespace XamarinApp
             var btn = FindViewById<Button>(Resource.Id.button1);
             var te = FindViewById<TextView>(Resource.Id.editText1);
             var tv = FindViewById<TextView>(Resource.Id.textView1);
-            btn.Click += (s, e) => tv.Text = ClassLibrary.UtilityHelloWorld.HelloWorld(te.Text);
+            btn.Click += (s, e) => tv.Text = UtilityHelloWorld.HelloWorld(te.Text);
         }
 
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ClassLibrary;
 
 namespace WindowsFormsApp
 {
@@ -19,7 +20,7 @@ namespace WindowsFormsApp
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(ClassLibrary.UtilityHelloWorld.HelloWorld(textBox1.Text));
+            MessageBox.Show(UtilityHelloWorld.HelloWorld(textBox1.Text));
         }
     }
 }
